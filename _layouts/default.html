@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_newlines | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>
+    (function () {
+      var t = localStorage.getItem('vicip-theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    })();
+    function toggleTheme() {
+      var h = document.documentElement;
+      var next = h.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      h.setAttribute('data-theme', next);
+      localStorage.setItem('vicip-theme', next);
+    }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="{{ '/' | relative_url }}">
+      <img class="logo-img" src="{{ 'assets/img/logo.png' | relative_url }}" alt="viennaclips">
+      <span>viennaclips</span>
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>News</a>
+      <a href="{{ '/tags/' | relative_url }}" {% if page.url == '/tags/' %}class="active"{% endif %}>Topics</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>Team</a>
+      <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark / light" aria-label="Toggle theme">◐</button>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <span>© {{ site.time | date: '%Y' }} viennaclips · Built with Jekyll on GitHub Pages</span>
+    <span><a href="{{ '/feed.xml' | relative_url }}">RSS</a> · <a href="https://clinpath.short.gy/about">Contact</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

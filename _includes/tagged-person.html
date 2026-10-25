@@ -1,0 +1,15 @@
+<!-- Renders a tagged-person chip: avatar + name, linking to their section on /authors/.
+     Expects: person_name (display name string) -->
+
+{% assign p_key = include.person_name | slugify %}
+{% assign p = site.data.authors[p_key] %}
+<span class="author-chip">
+  <a href="{{ '/authors/' | relative_url }}#{{ p_key }}" title="{{ include.person_name }}">
+    {% if p and p.photo %}
+    <img class="avatar-sm" src="{{ p.photo | relative_url }}" alt="{{ include.person_name }}">
+    {% else %}
+    <span class="avatar-sm avatar-initials">{{ include.person_name | slice: 0 }}{{ include.person_name | split: ' ' | last | slice: 0 }}</span>
+    {% endif %}
+  </a>
+  <a class="author-name" href="{{ '/authors/' | relative_url }}#{{ p_key }}">{{ include.person_name }}</a>
+</span>

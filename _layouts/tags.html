@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="page-head">
+  <h1>Topics</h1>
+  <p class="sub">Explore postings tagged by research topic.</p>
+</div>
+
+<section class="section" id="tag-list">
+  {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+  <div class="post-list">
+    {% for t in all_tags %}
+    {% assign count = 0 %}{% for post in site.posts %}{% if post.tags contains t %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}
+    <article class="post-card">
+      <h3><a class="post-link" href="#{{ t | slugify }}">#{{ t }}</a></h3>
+      <p class="excerpt">{{ count }} post{% if count != 1 %}s{% endif %}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  {% for t in all_tags %}
+  <div id="{{ t | slugify }}" style="scroll-margin-top: 90px;">
+    <div class="section-head">
+      <h2>#{{ t }}</h2>
+      <a class="more" href="{{ '/tags/' | relative_url }}#tag-list">↑ all tags</a>
+    </div>
+    <div class="post-list">
+      {% for post in site.posts %}
+      {% if post.tags contains t %}
+      <article class="post-card">
+        <div class="meta">
+          <span class="author">{{ post.author | default: 'VICIP' }}</span>
+          <span>{{ post.date | date: '%d %b %Y' }}</span>
+        </div>
+        <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>{% endif %}
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

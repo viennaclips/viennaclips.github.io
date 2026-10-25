@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="article">
+  <div class="meta">
+    {% assign a_key = page.author | default: 'VICIP' | slugify %}
+    {% assign a = site.data.authors[a_key] %}
+    <span class="author-chip">
+      <a href="{{ '/authors/' | relative_url }}#{{ a_key }}" title="{{ page.author | default: 'VICIP' }}">
+        {% if a and a.photo %}
+        <img class="avatar-sm" src="{{ a.photo | relative_url }}" alt="{{ page.author | default: 'VICIP' }}">
+        {% else %}
+        <span class="avatar-sm avatar-initials">{{ page.author | default: 'VICIP' | slice: 0 }}{{ page.author | default: 'VICIP' | split: ' ' | last | slice: 0 }}</span>
+        {% endif %}
+      </a>
+      <a class="author-name" href="{{ '/authors/' | relative_url }}#{{ a_key }}">{{ page.author | default: 'VICIP' }}</a>
+    </span>
+    <span>{{ page.date | date: '%d %B %Y' }}</span>
+    {% for tag in page.tags %}<span class="tag"><a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a></span>{% endfor %}
+  </div>
+  <h1>{{ page.title }}</h1>
+  {% if page.tagged %}
+  <div class="meta tagged-row">
+    <span class="tagged-label">Contributors</span>
+    {% for person in page.tagged %}{% include tagged-person.html person_name=person %}{% endfor %}
+  </div>
+  {% endif %}
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

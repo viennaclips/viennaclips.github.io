@@ -1,0 +1,21 @@
+# Author directory — one entry per group member.
+# photo: path to a square headshot under assets/img/ (e.g. assets/img/dominik.jpg)
+#        if omitted, the initials avatar is shown instead.
+# role / bio / links: shown on the Team page.
+
+dominik-roth:
+  name: Dominik Roth
+  photo: assets/img/dominik-roth.jpg
+  role: Head, Clinical Pathways & Health Services Research
+  bio: Diagnostic, prognostic, and therapeutic pathways.
+  links:
+    Researcher Profile: https://www.meduniwien.ac.at/researcher/dominik_roth
+    ResearchGate: https://www.researchgate.net/profile/Dominik-Roth-3
+
+example-member:
+  name: Your Name
+  # photo: assets/img/your-name.jpg
+  role: PhD Student
+  bio: Copy this block to add a team member, then delete this placeholder. Set a photo or leave it out for the initials avatar.
+  links:
+    GitHub: https://github.com/

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="page-head">
+  <h1>Research news by team member</h1>
+</div>
+
+<section class="section">
+  {% for author in site.data.authors %}
+  {% assign a = author[1] %}
+  {% assign has_posts = false %}
+  {% for post in site.posts %}{% if post.author == a.name %}{% assign has_posts = true %}{% endif %}{% endfor %}
+  {% if has_posts %}
+  <div id="{{ author[0] | slugify }}" style="scroll-margin-top: 90px;">
+    <div class="section-head author-head">
+      <h2>
+        {% if a.photo %}
+        <img class="avatar-sm" src="{{ a.photo | relative_url }}" alt="{{ a.name }}">
+        {% else %}
+        <span class="avatar-sm avatar-initials">{{ a.name | slice: 0 }}{{ a.name | split: ' ' | last | slice: 0 }}</span>
+        {% endif %}
+        {{ a.name }}
+      </h2>
+    </div>
+    <div class="post-list">
+      {% for post in site.posts %}
+      {% if post.author == a.name %}
+      <article class="post-card">
+        <div class="meta">
+          <span>{{ post.date | date: '%d %b %Y' }}</span>
+          {% for tag in post.tags limit: 2 %}<span class="tag"><a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a></span>{% endfor %}
+        </div>
+        <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>{% endif %}
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</section>

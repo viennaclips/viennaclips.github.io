@@ -1,0 +1,16 @@
+<!-- Renders an author avatar (photo or initials), clickable to their section on /authors/.
+     Expects: author_name (display name string), author_key (optional slug key into authors.yml) -->
+
+{% assign key = include.author_key | default: include.author_name | slugify %}
+{% assign a = site.data.authors[key] %}
+
+<span class="author-chip">
+  <a href="{{ '/authors/' | relative_url }}#{{ key }}" title="{{ include.author_name }}">
+    {% if a and a.photo %}
+    <img class="avatar-sm" src="{{ a.photo | relative_url }}" alt="{{ include.author_name }}">
+    {% else %}
+    <span class="avatar-sm avatar-initials">{{ include.author_name | slice: 0 }}{{ include.author_name | split: ' ' | last | slice: 0 }}</span>
+    {% endif %}
+  </a>
+  <a class="author-name" href="{{ '/authors/' | relative_url }}#{{ key }}">{{ include.author_name }}</a>
+</span>

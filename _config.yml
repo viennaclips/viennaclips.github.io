@@ -1,0 +1,39 @@
+# VICIP group blog
+include: ["_pages"]
+permalink: pretty
+
+title: viennaclips
+description: >-
+  Research notes, paper announcements and methods write-ups from the VICIP group.
+tagline: Clinical decisions made quickly and well informed.
+
+# Publish posts even if their timestamp is slightly ahead of the build
+# server's clock (GitHub Pages builds in UTC). Without this, a post dated
+# "today 21:00 CET" is dropped silently when the site builds before 21:00 CET.
+future: true
+
+theme: null
+plugins: []
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: vicip
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page

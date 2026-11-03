@@ -11,7 +11,7 @@ As part of the annual [Vienna Emergency Medicine Symposium](https://notfallmediz
 
 ## Best abstract award
 
-Each year, authors of the best abstracts are invited for poral reesentation at the Vienna Emergency Medicine Symposium, and based on assessment by an international committee, the three very best are being awarded. 
+Each year, authors of the best abstracts are invited for oral presentation at the Vienna Emergency Medicine Symposium, and based on assessment by an international committee, the three very best are being awarded. 
 **We are very proud to announce that this year, Karina was awarded the first prize for her presentation of the HEART-score review! Congratulations Karina!** 
 
 ## Evidence synthesis for prognosis of patients witch acute chest pain

@@ -6,7 +6,7 @@
 bettina-wandl:
   name: Bettina Wandl
   photo: assets/img/bettina-wandl.png
-  role: Research Assistant
+  role: Research assistant
   bio: RN, MA. Research synthesis.
   links:
     ResearchGate: https://www.researchgate.net/profile/Bettina-Wandl
@@ -23,7 +23,7 @@ dominik-roth:
 homa-hemati:
   name: Homa Hemati
   photo: assets/img/homa-hemati.png
-  role: PhD Candidate
+  role: PhD candidate
   bio: PharmD. Pathways and Health Services Research.
   links:
     ResearchGate: https://www.researchgate.net/profile/Homa-Hemati
@@ -31,15 +31,39 @@ homa-hemati:
 karina-tapinova:
   name: Karina Tapinova
   photo: assets/img/karina-tapinova.jpg
-  role: PhD Candidate
+  role: PhD candidate
   bio: MD. Research synthesis, prognostic scores, healtth & climate.
   links:
     ResearchGate: https://www.researchgate.net/profile/Karina-Tapinova
 
+katharina-tscherny:
+  name: Katharina Tscherny
+  #photo: assets/img/katharina-tscherny.jpg
+  role: PhD candidate
+  bio: MD, RN. Shared decision making.
+  links:
+    #ResearchGate: https://www.researchgate.net/profile/Karina-Tapinova
+
+larissa-bernert:
+  name: Larissa Bernert
+  #photo: assets/img/larissa-bernert.jpg
+  role: Physician researcher
+  bio: MD. Chest pain pathways.
+  links:
+    #ResearchGate: https://www.researchgate.net/profile/Karina-Tapinova
+
+maximilian-fitz:
+  name: Maximilian Fitz
+  #photo: assets/img/maximilian-fitz.jpg
+  role: MD student
+  bio: Chest pain pathways.
+  links:
+    #ResearchGate: https://www.researchgate.net/profile/Karina-Tapinova
+
 roland-kraxner:
   name: Roland Kraxner
   photo: assets/img/roland-kraxner.jpg
-  role: PhD Candidate
+  role: PhD candidate
   bio: MD, General practitioner. Access points to healthcare.
   links:
     GP practice: https://www.ordination-kraxner.at/

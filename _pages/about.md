@@ -5,7 +5,7 @@ subtitle: We are a diverse team with backgrounds in clinical medicine, medical s
 ---
 
 <p>We use this blog to share new findings, preprints, conference trips and methods notes.</p>
-<p>Meet our core team members below, and visit our <a href="https://clinpath.short.gy/about">page</a> at the university website for a full list, including external research fellows.</p>
+<p>Meet our core team members below, and visit our <a href="https://clinpath.short.gy/about">page at the university website</a> for a full list, including external research fellows.</p>
 <div class="team-grid" style="padding:0; margin-top:24px;">
 
   {% for author in site.data.authors %}

@@ -3,19 +3,59 @@
 #        if omitted, the initials avatar is shown instead.
 # role / bio / links: shown on the Team page.
 
+bettina-wandl:
+  name: Bettina Wandl
+  photo: assets/img/bettina-wandl.png
+  role: Research Assistant
+  bio: RN, MA. Research synthesis.
+  links:
+    ResearchGate: https://www.researchgate.net/profile/Bettina-Wandl
+
 dominik-roth:
   name: Dominik Roth
   photo: assets/img/dominik-roth.jpg
   role: Head, Clinical Pathways & Health Services Research
-  bio: Diagnostic, prognostic, and therapeutic pathways.
+  bio: Diagnostic and prognostic research and methodology.
   links:
     Researcher Profile: https://www.meduniwien.ac.at/researcher/dominik_roth
     ResearchGate: https://www.researchgate.net/profile/Dominik-Roth-3
 
+homa-hemati:
+  name: Homa Hemati
+  photo: assets/img/homa-hemati.png
+  role: PhD Candidate
+  bio: PharmD. Pathways and Health Services Research.
+  links:
+    ResearchGate: https://www.researchgate.net/profile/Homa-Hemati
+    
+karina-tapinova:
+  name: Karina Tapinova
+  photo: assets/img/karina-tapinova.jpg
+  role: PhD Candidate
+  bio: MD. Research synthesis, prognostic scores, healtth & climate.
+  links:
+    ResearchGate: https://www.researchgate.net/profile/Karina-Tapinova
+
+roland-kraxner:
+  name: Roland Kraxner
+  photo: assets/img/roland-kraxner.jpg
+  role: PhD Candidate
+  bio: MD, General practitioner. Access points to healthcare.
+  links:
+    GP practice: https://www.ordination-kraxner.at/
+
+verena-fuhrmann:
+  name: Verena Fuhrmann
+  photo: assets/img/verena-fuhrmann.jpg
+  role: Physician researcher
+  bio: MD. Prehospital emergency medicine.
+  links:
+    Riding club: https://www.arion.or.at/
+
 example-member:
   name: Your Name
   # photo: assets/img/your-name.jpg
-  role: PhD Student
+  role: PhD Candidate
   bio: Copy this block to add a team member, then delete this placeholder. Set a photo or leave it out for the initials avatar.
   links:
     GitHub: https://github.com/

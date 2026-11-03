@@ -27,4 +27,4 @@ We also found that although performance differed significantly between studies, 
 
 ## What's next
 
-The full paper is currently under review, and we are looking forward to let you know when it gets published! :relaxed:
+The full paper is currently under review, and we are looking forward to let you know when it gets published! 😊

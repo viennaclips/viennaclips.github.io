@@ -46,7 +46,7 @@ katharina-tscherny:
 
 larissa-bernert:
   name: Larissa Bernert
-  #photo: assets/img/larissa-bernert.jpg
+  photo: assets/img/larissa-bernert.png
   role: Physician researcher
   bio: MD. Chest pain pathways.
   links:
@@ -74,7 +74,7 @@ verena-fuhrmann:
   role: Physician researcher
   bio: MD. Prehospital emergency medicine.
   links:
-    Riding club: https://www.arion.or.at/
+    #Riding club: https://www.arion.or.at/
 
 example-member:
   name: Your Name

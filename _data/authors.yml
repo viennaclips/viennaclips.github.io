@@ -75,11 +75,3 @@ verena-fuhrmann:
   bio: MD. Chest pain pathways, prehospital emergency medicine.
   links:
     #Riding club: https://www.arion.or.at/
-
-example-member:
-  name: Your Name
-  # photo: assets/img/your-name.jpg
-  role: PhD Candidate
-  bio: Copy this block to add a team member, then delete this placeholder. Set a photo or leave it out for the initials avatar.
-  links:
-    GitHub: https://github.com/
